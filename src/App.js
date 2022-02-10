@@ -6,11 +6,11 @@ function App() {
     <div className="App">
 
 <nav>
-        <div class="site">
-            <a href="/home.html"> LOGo</a>   
-        </div>
+        
+            <a className='logo' href="/home.html"> LOGo</a>   
+      
 
-        <ul>
+        <ul className='links'>
             <li> <a href="/Home.html"> Home</a> </li>
             <li> <a href="/about.html"> About</a></li>
             <li> <a href="/product.html"> product</a></li>
@@ -25,8 +25,20 @@ function App() {
     <img src="https://www.sunset.com/wp-content/uploads/readers-choice-best-bridge-golden-gate-getty-462144413-0819.jpg" alt="img not found" width="1024" height="600"/>
 
     <h2>Welcome To BlogSpot</h2>
+<section className='content-wrapper'>
+<div class="city">
+    <p>
+        Manhattan
+      <br /> LA <br />
+      San Fransico 
+      <br />
+      Florida
 
-    <div class="txt">
+    </p>
+  
+
+</div>
+<div class="txt">
      <h4>Services that we provide</h4>
      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id totam deleniti officia dolores enim? Adipisci velit inventore quaerat eius nesciunt, dolorem et illo sapiente vero repudiandae laudantium laborum quos molestiae!</p>
     </div>
@@ -46,19 +58,10 @@ function App() {
 </form>
 
 
-<div class="city">
-    <p>
-        Manhattan
-      <br /> LA <br />
-      San Fransico 
-      <br />
-      Florida
 
-    </p>
-  
 
-</div>
-
+</section>
+    
 
 </main>
 

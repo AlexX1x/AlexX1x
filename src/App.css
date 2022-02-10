@@ -50,16 +50,26 @@ nav{
 
   border-bottom: 5px solid rgb(250, 107, 24);
 }
+ul a {
+  
+  color: rgb(235, 134, 18);
+}
 
+nav  .logo{
+  color: rgb(223, 115, 14);
+  float: left;
+  font-size: 50px;
+  text-decoration: none;
+}
 
-nav ul{
+nav .links{
   display: flex;
   justify-content: space-between;
-  align-items:center
-  
-  
-  
+  align-items:center;
+  text-decoration: none;
 }
+
+
 nav li {
 
   display: flex;
@@ -70,11 +80,11 @@ nav li {
   
 }
 
-nav a{
+/* nav a{
   color: rgb(250, 107, 24);
   text-decoration: none;
   
-}
+} */
 
 
 
@@ -88,9 +98,7 @@ footer{
   text-align: center;
 }
 
-main img{
-margin-left: 240px;
-}
+
 
 main h2{
 
@@ -99,13 +107,17 @@ main h2{
 
 main .txt{
   text-align: center;
-  margin-left: 400px;
-  margin-right: 400px;
+  margin-left: 40px;
+  margin-right: 40px;
   text-align: justify;
 }
 
 main form {
-margin-left: 1200px;
+/* margin-left: 1200px; */
+display: flex;
+    /* width: 33%; */
+    flex-direction: column;
+    min-width: 150px;
 }
 
 main form .radio{
@@ -114,7 +126,17 @@ main form .radio{
 }
 
 main .city  {
- display: flex;
- justify-content: flex-start;
+  display: flex;
+  /* justify-content: flex-start; */
+  flex-direction: column;
+  /* margin-right: 1000px; */
+
+  min-width:150px;
 }
 
+.content-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+}

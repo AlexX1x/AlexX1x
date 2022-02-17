@@ -1,12 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import { Button } from 'reactstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+export const x1 = (props) => {
+  return (
+    <Button color="danger">Danger!</Button>
+  );
+};
+
 
 function App() {
   return (
     <div className="App">
 
 <nav>
-        
+            {x1()}
             <a className='logo' href="/home.html"> LOGo</a>   
       
 

@@ -53,6 +53,7 @@ nav{
 ul a {
   
   color: rgb(235, 134, 18);
+  text-decoration: none;
 }
 
 nav  .logo{
@@ -139,4 +140,10 @@ main .city  {
   margin: 0 auto;
   display: flex;
   flex-direction: row;
+}
+
+.blog-card {
+  width: 400px;
+  height: auto;
+  margin-left: 450px;
 }

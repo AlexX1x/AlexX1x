@@ -1,99 +1,220 @@
-import logo from './logo.svg';
+
 import './App.css';
 import React from 'react';
-import { Button } from 'reactstrap';
+import {  Col, Container, Row,Nav,NavLink, Navbar, NavbarBrand, NavbarToggler, NavItem,
+  UncontrolledDropdown,DropdownToggle,
+  DropdownMenu, DropdownItem, NavbarText, Collapse, Button,Table,Input,
+  Card,CardBody, CardTitle,CardSubtitle, CardText,CardImg   } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Nvidia from './Nvidia.png'
+import FB from './FB.png'
+import Twitter from './Twitter.png'
+import Reddit from './Reddit.png'
+import Insta from './Insta.png'
+import phone from './Phone.png'
+import about from './About.html'
 
-export const x1 = (props) => {
-  return (
-    <Button color="danger">Danger!</Button>
-  );
-};
+
 
 
 function App() {
   return (
     <div className="App">
+    <header>
+      <Container>
 
-<nav>
-            {x1()}
-            <a className='logo' href="/home.html"> LOGo</a>   
-      
 
-        <ul className='links'>
-            <li> <a href="/Home.html"> Home</a> </li>
-            <li> <a href="/about.html"> About</a></li>
-            <li> <a href="/product.html"> product</a></li>
-            <li> <a href="/Services.html">Services</a></li>
-            <li> <a href="/contact.html">contact</a></li>
+            <Row>
+            <Col className='.col-3' xs='3' > <img src={Nvidia} width='120' ></img>  </Col>
+            <Col className='.col-6' xs='6'>
 
-        </ul>
 
-    </nav>
+            <div>
+            <Navbar
+            color="light"
+            expand="md"
+            light
+            >
+            <NavbarBrand href="/">
+            Home
+            </NavbarBrand>
+            <NavbarToggler onClick={function noRefCheck(){}} />
+            <Collapse navbar>
+            <Nav
+            className="me-auto"
+            navbar
+            >
+            <NavItem>
+              <NavLink href="/components/">
+                About
+                <a href={about}></a>
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="https://github.com/reactstrap/reactstrap">
+                
+              </NavLink>
+            </NavItem>
+            <UncontrolledDropdown
+              inNavbar
+              nav
+            >
+              <DropdownToggle
+                caret
+                nav
+              >
+                Contact
+              </DropdownToggle>
+              <DropdownMenu right>
+                <DropdownItem>
+               
+                
+                <a href='https://www.facebook.com/' >
+                  <img src={FB} width='20' ></img>
+                   &nbsp; FaceBook
+                </a>
+                </DropdownItem>
+                <DropdownItem>
+                  <a href='https://twitter.com/home'>
+                    <img src={Twitter} width='20'></img>
+                     &nbsp; Twitter</a>
+                </DropdownItem>
+                <DropdownItem>
+                 
+                <a href='https://www.reddit.com/'> 
+                  <img src={Reddit} width='20'></img>
+                  &nbsp; Reddit
+                 </a>
+                </DropdownItem>
+                <DropdownItem>
+                  <a href='https://www.instagram.com/'>
+                  <img src={Insta} width ='20'></img>
+                  &nbsp; Instagram
+                  </a>
+                </DropdownItem>
+                <DropdownItem divider />
+                <DropdownItem>
+                  <img src={phone} width= '20'></img>
+                 &nbsp; <a href="tel:+375 333432454" target="_blank">+375 3334 32454</a>
+                </DropdownItem>
+              </DropdownMenu>
+            </UncontrolledDropdown>
+            </Nav>
+            <NavbarText>
+            <div>
+            <Button
+                    color="danger"
+                  >
+                    Profile
+                  </Button>
+            </div>
+            </NavbarText>
+            </Collapse>
+            </Navbar>
+            </div>
 
-<main>
-    <img src="https://www.sunset.com/wp-content/uploads/readers-choice-best-bridge-golden-gate-getty-462144413-0819.jpg" alt="img not found" width="1024" height="600"/>
+            </Col>
+            <Col className='.col-3' xs='3'>
+            <div>
+                  
+            </div>
+            </Col>
+            </Row>
+<br/>
+            <div>
+    <Container>
+    <Row >
+       <Col xs='3'><Input  bsSize="sm"
+    type="search" placeholder='search'/></Col>
+    <Col xs='3'> 
+          <Button outline size="sm"> Search </Button>
+    </Col>
+     </Row>
+    </Container>
 
-    <h2>Welcome To BlogSpot</h2>
-<section className='content-wrapper'>
-<div class="city">
-    <p>
-        Manhattan
-      <br /> LA <br />
-      San Fransico 
-      <br />
-      Florida
+   
+  
+</div>
 
-    </p>
+<br/>
+
+            <Row>
+              <Col className='.col-6' xs='6'></Col>
+<Container>
+              <div>
+  <Card className="blog-card">
+    <CardImg
+      alt="Card image cap"
+      src="https://picsum.photos/318/180"
+      top
+      width="50"
+    />
+    <CardBody>
+      <CardTitle tag="h5">
+        Card Title
+      </CardTitle>
+      <CardText>
+        This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+      </CardText>
+      <CardText>
+        <small className="text-muted">
+          Last updated 3 mins ago
+        </small>
+      </CardText>
+      <Button>
+        Read More
+      </Button>
+    </CardBody>
+  </Card>
+  <br/>
+  <br/>
+  <Card className="blog-card">
+   
+    <CardImg
+      alt="Card image cap"
+      bottom
+      src="https://picsum.photos/318/180"
+      />
+       <CardBody>
+      <CardTitle tag="h5">
+        Card Title
+      </CardTitle>
+      <CardText>
+        This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+      </CardText>
+      <CardText>
+        <small className="text-muted">
+          Last updated 3 mins ago
+        </small>
+      </CardText>
+      <Button>
+        Read More
+      </Button>
+    </CardBody>
+  </Card>
+</div>
+</Container>
+</Row>
+
+            <Row></Row>
+      </Container>
+    </header>
+   
+   <body>
   
 
-</div>
-<div class="txt">
-     <h4>Services that we provide</h4>
-     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id totam deleniti officia dolores enim? Adipisci velit inventore quaerat eius nesciunt, dolorem et illo sapiente vero repudiandae laudantium laborum quos molestiae!</p>
-    </div>
+  
 
-
-<form >
-    <input type="search" placeholder="Search" />
-    <input type="date" name="" id="" />
-
-    <div class="radio">
-        <input type="radio" id="town"/> <label for="town">Town</label>
-        <input type="radio" id="village"/> <label for="village">village</label>
-        <input type="radio" id="City"/> <label for="City">City</label>
-    
-    </div>
-   
-</form>
+   </body>
 
 
 
 
-</section>
-    
-
-</main>
 
     <footer>
         <p>All rights reserver &copy; WarnerBros.Co</p>
     </footer>
 
-
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
     </div>
   );
 }
